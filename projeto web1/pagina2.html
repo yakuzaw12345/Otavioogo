@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <style>
+        *{
+            text-decoration: none;
+        }
+
+        .header{
+            height: 100vh;
+        }
+
+        .container{
+            display: flex;
+            margin: 0;
+        }
+
+        .center-center {
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            margin-bottom: 10px;
+            height: auto;
+            min-height: 50px;
+            background-color: #222222;
+        }
+
+        .navbar-nav{
+            flex-wrap: wrap;
+            padding: 0 20px;
+            height: 100%;
+        }
+
+        .navbar-nav .item{
+            flex: 1;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: normal;
+            margin: 5px;
+        }
+
+        .navbar-nav .item a{
+            width: 100%;
+            height: 100%;
+            color: #C2C6D3;
+        }
+
+        .profile{
+            width: 98%;
+            max-width: 600px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .profile-img{
+            margin: 10px auto;
+            width: 280px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+        }
+
+        .profile h1{
+            font-size: 2.35em;
+            text-align: center;
+            margin-bottom: 0; 
+        }
+
+        .social{
+            width: auto;
+            margin: 0 auto;
+        }
+
+        .row{
+            padding: 50px 115px;
+        }
+
+        .row:nth-child(odd){
+            background-color: #26353e;
+            color: #C2C6D3;
+        }
+
+        .title{
+            font-size: 2.15em;
+            text-transform: uppercase;
+        }
+
+        .description {
+            padding: 0 20px;
+            text-align: justify;
+            font-size: 1.39em;
+        }
+
+        .formation{
+            flex: 1;
+            font-size: 1.16em;
+        }
+
+        .formation .year{
+            font-size:.75em;
+        }
+
+        .skills{
+            padding: 35px 60px;
+            margin: 0 auto;
+            width: 95%;
+            max-width: 480px;
+            background-color: rgba(255, 255, 255, .1);
+            border: 2px solid #C2C6D3;
+        }
+
+        .skill{
+            display: inline-block;
+            margin: 3px 7px;
+            padding: 5px 10px;
+            background-color: #7a7d87; 
+            color: #C2C6D3;
+        }
+
+        .table{
+            flex-direction: row;
+            width: 80%;
+            margin: 0 auto;
+            padding: 5px 20px;
+            text-align: center;
+        }
+
+        .column{
+            flex: 1;
+            order: 1;
+            flex-grow: 3;
+            display: flex;
+            flex-direction: column;
+            align-content: stretch;
+        }
+
+        .column div {
+            flex:1;
+            border: 1px solid #000;
+        }
+
+        .column .header{
+            font-weight: bold;
+            text-transform: uppercase;
+            height: auto;
+        }
+
+        #hours{
+            flex-grow: 1;
+            order: -1;
+        }
+
+        footer{
+            padding: 20px 20px 0 20px;
+            height: 40px;
+            text-align: right;
+            font-size: 1.05em;
+            color: #7a7d87;
+        }
+    </style>
+    <title>Otavio Ogo | página pessoal</title>
+</head>
+<body>
+    <section class="header">
+        <nav class="navbar">
+            <div class="container navbar-nav">
+                <div class="item active"><a href="#home">Home</a></div>
+                <div class="item"><a href="#description">Descrição</a></div>
+                <div class="item"><a href="#school">Formação</a></div>
+                <div class="item"><a href="#skills">Habilidades</a></div>
+                <div class="item"><a href="#schedules">Grade de Horário</a></div>
+            </div>
+        </nav>
+        <div id="home" class="container center-center profile">
+            <img class="profile-img" src="./img/ooo.jpg">
+            <h1>Otavio Eidi de Mello Ogo</h1>
+            <div class="social">
+                <a href="https://www.facebook.com/otavio.ogo.1/" target="_blank"><div> CONTATO : facebook </div></a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="description" class="row">
+            <h3 class="title">Descrição</h3>
+            <p class="description">
+                Eu tenho 20 anos de idade. Estudo engenharia de Software. Estava trabalhando na UTFPR , como suporte e manutencao
+                , agora trabalho como programador , em bandeirantes , nos tempos livres formato computadores e ajudo como suporte caso precise.
+            </p>
+        </div>
+        <div id="school" class="row">
+            <h3 class="title">Formação</h3>
+            <div class="container">
+                <div class="formation">
+                    <h4 class="curse">Engenharia de Software - Cursando</h4>
+                    <h5 class="university">Universidade Tecnológica Federal do Paraná - UTFPR</h5>
+                    <span class="year">2017 - Previsão de conclusão 2021/1</span>
+                </div>
+                
+                <div class="formation">
+                    <h4 class="curse">Curso pratico word/Excel </h4>
+                    <h5 class="university">Escola Tecnica CTB</h5>
+                    <span class="year">2014 - 2016</span>
+                </div>
+            </div>
+        </div>
+        <div id="skills" class="row">
+            <h3 class="title">Habilidades</h3>
+            <div class="skills">
+                <div class="skill">JAVASCRIPT</div> 
+                <div class="skill">HTML</div>
+                <div class="skill">SQLSERVER</div>
+                <div class="skill">POSTGRESQL</div>
+                <div class="skill">C++</div>
+                <div class="skill">LINUX</div>
+                <div class="skill">PACOTE OFFICE</div>
+            </div>
+        </div>
+        <div id="schedules" class="row">
+            <h3 class="title">Grade de Horário</h3>
+            <div class="table container">
+                <div id="monday" class="column">
+                    <div class="header" >Segunda</div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes">IF64F-ES41/K008</div>
+                    <div class="classes">IF64F-ES41/K008</div>
+                    <div class="classes">OP32H-ES71/A036</div>
+                    <div class="classes">OP32H-ES71/A036</div>
+                </div>
+                <div id="tuesday" class="column">
+                    <div class="header" >Terça</div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes">IF66H-ES61/I203</div>
+                    <div class="classes">IF66H-ES61/I203</div>
+                    <div class="classes">IF66H-ES61/I203</div>
+                    <div class="classes">IF64F-ES41/K008</div>
+                    <div class="classes">IF64F-ES41/K008</div>
+                </div>
+                <div id="wednesday" class="column">
+                    <div class="header" >Quarta</div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes">IF66H-ES61/K009</div>
+                    <div class="classes">IF66H-ES61/K009</div>
+                    <div class="classes">ES63G-ES41/LIM</div>
+                    <div class="classes">ES63G-ES41/LIM</div>
+                </div>
+                <div id="thursday" class="column">
+                    <div class="header" >Quinta</div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes">ES63G-ES41/I203</div>
+                    <div class="classes">ES63G-ES41/I203</div>
+                    <div class="classes">ES63G-ES41/I203</div>
+                    <div class="classes"></div>
+                    <div class="classes"> </div>
+                </div>
+                <div id="friday" class="column">
+                    <div class="header" >Sexta</div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"></div>
+                    <div class="classes"> </div>
+                </div>
+                <div id="hours" class="column">
+                    <div class="header">#</div>
+                    <div class="classes">M1</div>
+                    <div class="classes">M2</div>
+                    <div class="classes">M3</div>
+                    <div class="classes">M4</div>
+                    <div class="classes">M5</div>
+                    <div class="classes">M6</div>
+                    <div class="classes">T1</div>
+                    <div class="classes">T2</div>
+                    <div class="classes">T3</div>
+                    <div class="classes">T4</div>
+                    <div class="classes">T5</div>
+                    <div class="classes">T6</div>
+                    <div class="classes">N1</div>
+                    <div class="classes">N2</div>
+                    <div class="classes">N3</div>
+                    <div class="classes">N4</div>
+                    <div class="classes">N5</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <span class="copyright">&copy; Otavio Ogo 2020</span>
+    </footer>
+</body>
+</html>
